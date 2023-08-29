@@ -33,17 +33,10 @@ function CardsContainer() {
 
     return (
         <div className="CardsContainer">
-            {/* {productsViewModel
+            {productsViewModel
             .filter(product => isShowProduct(product))
             .map((product) =>
                 <ProductCard key={product.id} deleteProduct = {deleteProduct} product={product} userType={userType}/>
-            )} */}
-            {productsModel.map((product) =>
-                <ProductCard
-                    key={product.id}
-                    deleteProduct={deleteProduct}
-                    product={product}
-                    userType={userType} />
             )}
             <button onClick={() => changeUserType()}>Change to Admin</button>
             <button onClick={() => setProductsViewModel(productsModel)}>Unhide all products</button>
