@@ -32,9 +32,9 @@ function CardsContainer() {
     }
 
     return (
-        <div className="CardsContainer">
-            {productsViewModel
-            .filter(product => isShowProduct(product))
+        <div className="CardsContainer">          
+
+            {productsViewModel.filter(product => isShowProduct(product))           
             .map((product) =>
                 <ProductCard key={product.id} deleteProduct = {deleteProduct} product={product} userType={userType}/>
             )}
